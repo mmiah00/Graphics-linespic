@@ -12,7 +12,7 @@ def initialize (background_color):
 initialize (YELLOW)
 
 def plot (x, y, color):
-    pixels[y][x] = color.split (" ")
+    pixels[x][y] = color.split (" ")
 
 def line (x1, y1, x2, y2, color):
     x,y = x1, y1
@@ -27,8 +27,7 @@ def line (x1, y1, x2, y2, color):
         x = x + 1
         d = d + 2*A
 
-line (0, 0, 39, 55, "0 0 0")
-line (0, 0, 40, 90, "0 0 0")
+line (50, 50, 150, 100, "0 0 0")
 
 def drawpic ():
     for y in range (500):
