@@ -1,6 +1,6 @@
-all: line.py
-	py line.py
+run: main.py
+	python3 main.py
 
 clean:
-	rm linepic.ppm
-	rm linepic.jpg
+	rm *.pyc
+	rm *~
