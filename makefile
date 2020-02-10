@@ -1,6 +1,6 @@
 all: line.py
-	python line.py
+	py line.py
 
 clean:
-	rm pic.ppm
-	rm pic.png
+	rm linepic.ppm
+	rm linepic.jpg
