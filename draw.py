@@ -8,9 +8,9 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         elif slope > 1:
             octant2 (x0, y0, x1, y1, screen, color)
         elif slope < -1:
-            octant3 (x1, y1, x0, y0, screen, color)
+            octant3 (x0, y0, x1, y1, screen, color)
         elif (slope < 0) & (slope > -1):
-            octant4 (x1, y1, x0, y0, screen, color)
+            octant4 (x0, y0, x1, y1, screen, color)
 
 def octant1 (x0, y0, x1, y1, screen, color): #also for octant 5
     x,y = x0, y0
