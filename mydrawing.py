@@ -6,23 +6,26 @@ s = new_screen()
 YELLOW = [255, 255, 0]
 BLACK = [0, 0, 0]
 
-def rect (x1, y1, x2, y2, length, color):
-    a,b,c,d = x1, y1, x2, y2
-    delta_x = x2 - x1
-    delta_y = y2 - x1
-    for i in range (length):
-        draw_line (a,b,c,d, s, color)
-        a += delta_x
-        b += delta_y
-        c += delta_x
-        d += delta_y
 
-rect (250,250, 450,450, 100,YELLOW )
+#draw_line (250, 250, 250, 300, s, YELLOW)
+#draw_line (250, 300, 300,300, s, YELLOW)
+#draw_line (300, 300, 300, 250, s, YELLOW)
+#draw_line (300, 250, 250, 250, s, YELLOW)
 
-draw_line (250, 250, 250, 300, s, YELLOW)
-draw_line (250, 300, 300,300, s, YELLOW)
-draw_line (300, 300, 300, 250, s, YELLOW)
-draw_line (300, 250, 250, 250, s, YELLOW)
+def square (x,y, length, color): 
+	x0 = x - (length/2)
+	y0 = y - (length/2)
+	draw_line (x0, y0, x0 + length, y0, s, color)
+	draw_line (x0 + length, y0, x0 + length, y0 + length, s, color)
+	draw_line (x0 + length, y0 + length, x0, y0 + length,s,color)
+	draw_line (x0, y0 + length, x0,y0,s,color)
+
+size = 25
+color = 10
+while (size < 450):
+	square (250,250,size,[255,255,color])
+	color += 50 
+	size += 25
 
 display(s)
 save_ppm(s, 'binary2.ppm')
