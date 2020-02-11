@@ -3,14 +3,14 @@ from display import *
 def draw_line( x0, y0, x1, y1, screen, color ):
     if x1 - x0 != 0:
         slope = ((y1 - y0) / (x1 - x0)) + 0.0
-        if (slope >= 0) & (slope <= 1):
+        if (slope > 0) & (slope < 1):
             octant1 (x0, y0, x1, y1, screen, color)
         elif slope > 1:
             octant2 (x0, y0, x1, y1, screen, color)
         # elif slope < -1:
         #     octant3 (x0, y0, x1, y1, screen, color)
-        # elif (slope < 0) & (slope > -1):
-        #     octant4 (x0, y0, x1, y1, screen, color)
+        elif (slope < 0) & (slope > -1):
+            octant4 (x0, y0, x1, y1, screen, color)
 
 
 def octant1 (x0, y0, x1, y1, screen, color): #also for octant 5
