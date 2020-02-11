@@ -1,5 +1,6 @@
 from display import *
 from draw import *
+import random 
 
 s = new_screen()
 YELLOW = [255, 255, 0]
@@ -8,7 +9,7 @@ BLACK = [0, 0, 0]
 draw_line (50, 425, 50 + 90, 425 -120, s, YELLOW)
 draw_line (50, 425, 50 + 40, 425 + 30, s, YELLOW)
 draw_line (50 + 90, 425 - 120, 50 + 90 + 30, 425 - 120 + 40, s, YELLOW)
-draw_line (50 + 90 + 30, 425 - 120 + 40, 50 + 40, 425 + 30, s YELLOW)
+draw_line (50 + 90 + 30, 425 - 120 + 40, 50 + 40, 425 + 30, s, YELLOW)
 
 for i in range (100):
     x0 = random.randint (0, 500)
