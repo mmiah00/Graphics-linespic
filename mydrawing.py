@@ -18,35 +18,11 @@ def rect (x1, y1, x2, y2, length, color):
         d += delta_y
 
 rect (250,250, 450,450, 100,YELLOW )
-# #octants 1 and 5
-# draw_line(0, 0, XRES-1, YRES-1, s, c)
-# draw_line(0, 0, XRES-1, YRES / 2, s, c)
-# draw_line(XRES-1, YRES-1, 0, YRES / 2, s, c)
-#
-# #octants 8 and 4
-# c[BLUE] = 255;
-# draw_line(0, YRES-1, XRES-1, 0, s, c);
-# draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
-# draw_line(XRES-1, 0, 0, YRES/2, s, c);
-#
-# #octants 2 and 6
-# c[RED] = 255;
-# c[GREEN] = 0;
-# c[BLUE] = 0;
-# draw_line(0, 0, XRES/2, YRES-1, s, c);
-# draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
-#
-# #octants 7 and 3
-# c[BLUE] = 255;
-# draw_line(0, YRES-1, XRES/2, 0, s, c);
-# draw_line(XRES-1, 0, XRES/2, YRES-1, s, c);
-#
-# #horizontal and vertical
-# c[BLUE] = 0;
-# c[GREEN] = 255;
-# draw_line(0, YRES/2, XRES-1, YRES/2, s, c);
-# draw_line(XRES/2, 0, XRES/2, YRES-1, s, c);
 
+draw_line (250, 250, 250, 300, s, YELLOW)
+draw_line (250, 300, 300,300, s, YELLOW)
+draw_line (300, 300, 300, 250, s, YELLOW)
+draw_line (300, 250, 250, 250, s, YELLOW)
 
 display(s)
 save_ppm(s, 'binary2.ppm')
