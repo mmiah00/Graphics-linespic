@@ -12,7 +12,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         elif (slope < 0) & (slope > -1):
             octant4 (x0, y0, x1, y1, screen, color)
     else: #vertical
-        if y0 > y1:
+        if y0 < y1:
             y = y0
             while (y > y1):
                 plot (screen, color, x0, y)
