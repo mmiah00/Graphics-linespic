@@ -13,7 +13,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             octant4 (x0, y0, x1, y1, screen, color)
     else: #vertical
         y = y0
-        while (y < y1):
+        while (y <= y1):
             plot (screen, color, x0, y)
             y = y + 1
 
